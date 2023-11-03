@@ -48,7 +48,7 @@ public class X01CrearEmpleadoXML {
 
 				// Lee los campos del registro actual
 				id = fichOrigen.readInt();
-				fichOrigen.readI
+	
 				for (int i = 0; i < apellido.length; ++i)
 					apellido[i] = fichOrigen.readChar();
 
