@@ -71,9 +71,10 @@ public class X01CrearEmpleadoXML {
 				posicion += 36; // Siguiente Registro
 			}
 
-			
 			// **************************************************************************
-			// ***A partir de la DOM en documento, la reconvertimos a XML con Transformer
+			// *** Conversion de DOM a XML
+			// **************************************************************************
+			// *** A partir de la DOM en documento, la reconvertimos a XML con Transformer
 			// **************************************************************************
 			DOMSource fuente = new DOMSource(documento);
 			StreamResult result = new StreamResult(new java.io.File("resources/Empleados.xml"));
