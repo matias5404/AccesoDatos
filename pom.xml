@@ -1,6 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<properties>
+		<configuration-addGeneratedAnnotation>true</configuration-addGeneratedAnnotation>
+	</properties>
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>AD</groupId>
 	<artifactId>AD</artifactId>
@@ -17,7 +21,6 @@
 		</resources>
 
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -42,6 +45,7 @@
 				<configuration>
 					<schemaDirectory>${basedir}/resources</schemaDirectory>
 					<generateDirectory>${basedir}/src/</generateDirectory>
+					<locale>es</locale>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -68,6 +72,25 @@
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+
+		<!-- Utiliza las dependencias SQLite/ MariaDB  -->
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.34.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.7.2</version>
+		</dependency>
+
+		<!-- Utiliza las dependencias ORM / Hibernate  -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.3.1.Final</version>
 		</dependency>
 	</dependencies>
 </project>
