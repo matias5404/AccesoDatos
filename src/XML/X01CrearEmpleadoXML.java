@@ -27,7 +27,7 @@ public class X01CrearEmpleadoXML {
 		Double salario;
 		char apellido[] = new char[10];
 
-		System.out.println("Vamos a Convertir el fichero ficheroBinFijo.dat a XM ");
+		System.out.println("Vamos a Convertir el fichero ficheroBinFijo.dat a XML ");
 
 		// **************************************************************************
 		// ************* CREAMOS LA DOM a partir de un fichero binario

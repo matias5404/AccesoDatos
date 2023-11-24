@@ -5,15 +5,14 @@ import java.io.FileOutputStream;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-
 import generated.DatosArtic;
 import generated.ObjectFactory;
 import generated.Ventas;
 import generated.VentasType;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
 
 // CREA EL FICHERO ventasarticulo.xml

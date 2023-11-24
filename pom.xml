@@ -17,10 +17,16 @@
 		</resources>
 
 		<plugins>
+<!---
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.14.0</version> <!-- Use the latest version -->
+				<version>0.15.3</version>
+				-->
+			<plugin>
+				<groupId>org.jvnet.jaxb</groupId>
+				<artifactId>jaxb-maven-plugin</artifactId>
+				<version>4.0.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -35,7 +41,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
@@ -43,11 +49,20 @@
 			<version>1.4.20</version>
 		</dependency>
 
+		<!-- Utiliza las dependencias de Jakarta EE JAXB -->
+		<!--
+		https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api
+		Jakarta XML Binding API is just a specification -->
 		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.3.1</version> <!-- Use the appropriate version -->
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>4.0.1</version>
 		</dependency>
-
+		<!-- you need an actual implementation to make it work.-->
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

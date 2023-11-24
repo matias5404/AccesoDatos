@@ -1,14 +1,13 @@
 package jaxb;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
+import jakarta.xml.bind.JAXBException;
 
 public class Ejemplo1_JAXB_Escritura {
 
@@ -31,13 +30,13 @@ public class Ejemplo1_JAXB_Escritura {
 
 		// Creamos el contexto indicando la clase raíz
 		JAXBContext context = JAXBContext.newInstance(Libreria.class);
-		// Creamos el Marshaller, convierte el java bean en una cadena XML y el
-		// Unmarshaller
+		
+		// Creamos el Marshaller, convierte el java bean en una cadena XML 
 		Marshaller m = context.createMarshaller();
-		Unmarshaller unmars = context.createUnmarshaller();
-
+		
 		// Formateamos el xml para que quede bien
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		
 		// Lo visualizamos con system out
 		m.marshal(milibreria, System.out);
 

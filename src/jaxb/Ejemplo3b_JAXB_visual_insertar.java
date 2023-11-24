@@ -7,16 +7,15 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-
 import generated.DatosArtic;
 import generated.ObjectFactory;
 import generated.Ventas;
 import generated.VentasType;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 
 // Si no existe el fichero ventasarticulos.xml, ejectua el Ejemplo3a antes
 public class Ejemplo3b_JAXB_visual_insertar {
